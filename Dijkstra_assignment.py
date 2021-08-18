@@ -1,3 +1,5 @@
+import sys
+
 def dijkstra(file, start, target):
     
     graph = {}
@@ -57,5 +59,9 @@ def dijkstra(file, start, target):
     if dist[target] != assign_inf:
         print("Path is " + str(path))
                 
-dijkstra("exmouth-links.dat", 'J1053', 'J1037')
-        
+
+if __name__ == "__main__":
+    file = str(sys.argv[1])
+    start = str(sys.argv[2])
+    target = str(sys.argv[3])
+    dijkstra(file, start, target)
