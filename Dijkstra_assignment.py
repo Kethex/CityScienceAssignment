@@ -1,9 +1,25 @@
 import sys
 
 def dijkstra(file, start, target):
+    """
+    Parameters
+    ----------
+    file : str
+        Name of the file containing the graph.
+    start : str
+        Starting destination (node).
+    target : str
+        Targer destination (node.
+
+    Returns
+    -------
+    None.
+
+    """
     
     graph = {}
-
+    
+    # Converting .dat data to a dictionary
     with open(file, "r") as f:
         lines = f.readlines()
         for line in lines:
@@ -17,12 +33,14 @@ def dijkstra(file, start, target):
     dist = {}
     prev = {}
     unseen_nodes = graph
-    assign_inf = 1e10
+    assign_inf = float('inf')
     
+    # Assigns infinity to all but the starting node.
     for node in unseen_nodes:
         dist[node] = assign_inf
     dist[start] = 0
     
+    # Finds node with the smallest distance
     while unseen_nodes:     
         min_dist_node = None
         for node in unseen_nodes:
@@ -30,10 +48,12 @@ def dijkstra(file, start, target):
                 min_dist_node = node
             elif dist[node] < dist[min_dist_node]:
                 min_dist_node = node
-            
+        
+        # Removes visited node from unseen node set
         neighbours = graph[min_dist_node].items()
         unseen_nodes.pop(min_dist_node)
         
+        # Check neighbours of node 
         for neighbour, weight in neighbours:
             if min_dist_node == target:
                 pass
@@ -51,7 +71,7 @@ def dijkstra(file, start, target):
             path.insert(0, node)
             node = prev[node]
         except:
-            print('Path is not reachable')
+            print('No path is possible.')
             break
     path.insert(0, start)
     
