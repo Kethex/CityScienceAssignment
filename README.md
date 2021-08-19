@@ -11,6 +11,7 @@ Utilised Dijkstra's algorithm to calculate the shortest path between any two nod
 - `python Dijkstra.py <file> <start_node> <target_node>` will run the program in a terminal.
 - e.g. `python Dijkstra.py exmouth-links.dat J1053 J1037`.
 - Test suite can be run using `python test_Dijkstra.py`.
+- The .dat file you wish to use has to be in the same folder as Dijkstra.py and test_Dijkstra.py.
 
  Make sure that the node file is in the same folder as Dijkstra_assignment.py (like exmouth_links.dat is).
  
