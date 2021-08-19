@@ -8,7 +8,7 @@ Utilised Dijkstra's algorithm to calculate the shortest path between any two nod
 
 - Clone repository to computer.
 - Navigate to folder.
-- `python assignment.py <file> <start_node> <target_node>` will run the program in a terminal.
+- `python Dijkstra_assignment.py <file> <start_node> <target_node>` will run the program in a terminal.
 - e.g. `python Dijkstra_assignment.py exmouth_links.dat J1053 J1029`.
 
 ## References
