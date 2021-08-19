@@ -79,6 +79,7 @@ def dijkstra(file, start, target):
     if dist[target] != assign_inf:
         print("Path is " + str(path))
                 
+    return path
 
 if __name__ == "__main__":
     file = str(sys.argv[1])
