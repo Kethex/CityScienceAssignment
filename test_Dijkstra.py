@@ -14,7 +14,7 @@ class TestDijkstra(unittest.TestCase):
     def test_node(self):
         with self.assertRaises(KeyError):
             Dijkstra.dijkstra("exmouth-links.dat", "J1053", "Y3284")
-    
+            
             
 if __name__ == '__main__':
     unittest.main()

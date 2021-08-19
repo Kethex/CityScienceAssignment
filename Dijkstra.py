@@ -81,8 +81,21 @@ def dijkstra(file, start, target):
                 
     return path
 
-if __name__ == "__main__":
-    file = str(sys.argv[1])
-    start = str(sys.argv[2])
-    target = str(sys.argv[3])
+def main():
+    try:
+        file = str(sys.argv[1])
+    except IndexError:
+        print('Failed to provide a node file.')
+    try:
+        start = str(sys.argv[2])
+    except IndexError:
+        print('Failed to provide a starting node.')
+    try:
+        target = str(sys.argv[3])
+    except IndexError:
+        print('Failed to provide a target node.')
     dijkstra(file, start, target)
+        
+    
+if __name__ == "__main__":
+    main()
